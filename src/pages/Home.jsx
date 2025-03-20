@@ -92,7 +92,7 @@ const Home = () => {
     },
     {
       id: 0,
-      icon: "/agenda-main.png",
+      icon: "/documentation-main.png",
       title: "AGD",
       sub: "Documentation",
     },
