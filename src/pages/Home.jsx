@@ -65,36 +65,42 @@ const Home = () => {
       icon: "/agenda-main.png",
       title: "AGENDA",
       sub: "Project Management System",
+      link: "https://rvbypkie4gfkj9rda9uhe4ghyeir3zepn3kerzrki7mpx2n812nj6tk8hnkcd5h.erpimj.com/index.php?module=users/login",
     },
     {
       id: 1,
       icon: "/hris-main.png",
       title: "HRMS-IMJ",
       sub: "HR Management System",
+      link: "https://agenda.erpimj.com/hr/index.php?module=users/login",
     },
     {
       id: 2,
       icon: "/bms-main.png",
       title: "BMS-IMJ",
       sub: "Building Management System",
+      link: "https://rvbypkie4gfkj9rda9uhe4ghyeir3zepn3kerzrki7mpx2n812nj6tk8hnkcd5h.erpimj.com/bms/index.php?module=users/login",
     },
     {
       id: 0,
       icon: "/jadicrm-main.png",
       title: "JadiCRM",
       sub: "Customer Relations Management System",
+      link: "https://indomonang-client-website-next-js.vercel.app/login",
     },
     {
       id: 0,
       icon: "/crm-main.png",
       title: "CRM Registration",
       sub: "CRM Registration",
+      link: "http://9v8t7tryck91047mar7jm7390k8k42rzz5vbwm5fcy37skzzlyk51rtgi7icol.erpimj.com/a1bC2dE3fG4hI5jK6lM7nO8pQ9rS0",
     },
     {
       id: 0,
       icon: "/documentation-main.png",
       title: "AGD",
       sub: "Documentation",
+      link: "https://rvbypkie4gfkj9rda9uhe4ghyeir3zepn3kerzrki7mpx2n812nj6tk8hnkcd5h.erpimj.com/doc/",
     },
   ];
   return (
@@ -120,7 +126,7 @@ const Home = () => {
             return <div className={`w-[100px] h-[100px] ${i.color}`}></div>;
           })}
         </div>
-        <div className=" absolute w-[967px]  top-1/2 left-1/2 -translate-x-1/2 flex flex-col gap-[12px] -translate-y-1/2">
+        <div className=" absolute  lg:w-[967px] sm:w-full  top-1/2 left-1/2 -translate-x-1/2 flex flex-col gap-[12px] -translate-y-1/2">
           <div className=" relative justify-center flex  gap-[50px]">
             <div className=" flex gap-4 relative w-[100px]">
               <div className=" absolute left-0 top-0 -rotate-[24deg]">
@@ -182,7 +188,7 @@ const Home = () => {
             return (
               <div className="w-[200px] gap-[8px] flex flex-col">
                 <div className=" text-center flex justify-center items-center">
-                  <Link to={i.link}>
+                  <Link to={i.link} target="_blank">
                     <div
                       className="border border-sky-300 shadow rounded-[8px]"
                       style={{ padding: "32px" }}
