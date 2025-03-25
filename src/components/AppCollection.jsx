@@ -29,7 +29,7 @@ const AppCollection = () => {
       id: 3,
       icon: "/jadicrm-main.png",
       title: "JadiCRM",
-      sub: "Customer Relations Management System",
+      sub: "Customer Management System",
       link: "https://indomonang-client-website-next-js.vercel.app/login",
     },
     {
@@ -44,11 +44,25 @@ const AppCollection = () => {
       icon: "/documentation-main.png",
       title: "AGD",
       sub: "Documentation",
-      link: "https://rvbypkie4gfkj9rda9uhe4ghyeir3zepn3kerzrki7mpx2n812nj6tk8hnkcd5h.erpimj.com/doc/",
+      link: "https://rvbypkie4gfkj9rda9uhe4ghyeir3zepn3kerzrki7mpx2.erpimj.com/doc/",
+    },
+    {
+      id: 6,
+      icon: "/acurate logo.webp",
+      title: "Accurate",
+      sub: "Accounting Software",
+      link: "https://account.accurate.id/",
+    },
+    {
+      id: 5,
+      icon: "/dsm-logo.png",
+      title: "DSM",
+      sub: "DiskStation Manager",
+      link: "https://quickconnect.to/",
     },
   ];
   return (
-    <div className=" gap-[70px] flex flex-wrap lg:justify-between justify-center  items-center">
+    <div className=" gap-[70px] flex flex-wrap lg:justify-start justify-center  items-center">
       {main_data.map((i) => {
         return (
           <div className="w-[200px] gap-[8px] flex flex-col" key={i.id}>
@@ -66,7 +80,7 @@ const AppCollection = () => {
             <div className="w-[200px] flex flex-col justify-center items-center">
               <span className="font-semibold">{i.title}</span>
               <span
-                className=" text-sm font-normal text-center"
+                className=" text-sm font-normal text-center  h-[50px]"
                 style={{ color: "#64748B" }}
               >
                 {i.sub}
