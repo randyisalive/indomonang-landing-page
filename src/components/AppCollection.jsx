@@ -29,14 +29,14 @@ const AppCollection = () => {
       id: 3,
       icon: "/jadicrm-main.png",
       title: "JadiCRM",
-      sub: "Customer Management System",
+      sub: "Customer Relations Management",
       link: "https://indomonang-client-website-next-js.vercel.app/login",
     },
     {
       id: 4,
       icon: "/crm-main.png",
       title: "CRM Registration",
-      sub: "CRM Registration",
+      sub: "Customer Account Registration",
       link: "http://9v8t7tryck91047mar7jm7390k8k42rzz5vbwm5fcy37skzzlyk51rtgi7icol.erpimj.com/a1bC2dE3fG4hI5jK6lM7nO8pQ9rS0",
     },
     {
@@ -80,7 +80,7 @@ const AppCollection = () => {
             <div className="w-[200px] flex flex-col justify-center items-center">
               <span className="font-semibold">{i.title}</span>
               <span
-                className=" text-sm font-normal text-center  h-[50px]"
+                className=" text-sm font-normal text-center w-[300px]  h-[50px]"
                 style={{ color: "#64748B" }}
               >
                 {i.sub}
