@@ -28,28 +28,28 @@ const AppCollection = () => {
     {
       id: 3,
       icon: "/jadicrm-main.png",
-      title: "JadiCRM",
+      title: "JADI CRM",
       sub: "Customer Relations Management",
       link: "https://indomonang-client-website-next-js.vercel.app/login",
     },
     {
       id: 4,
       icon: "/crm-main.png",
-      title: "CRM Registration",
-      sub: "Customer Account Registration",
+      title: "SIGNUP",
+      sub: "JadiCRM Account Registration",
       link: "http://9v8t7tryck91047mar7jm7390k8k42rzz5vbwm5fcy37skzzlyk51rtgi7icol.erpimj.com/a1bC2dE3fG4hI5jK6lM7nO8pQ9rS0",
     },
     {
       id: 5,
       icon: "/documentation-main.png",
       title: "AGD",
-      sub: "Documentation",
+      sub: "AGENDA Documentation",
       link: "https://rvbypkie4gfkj9rda9uhe4ghyeir3zepn3kerzrki7mpx2.erpimj.com/doc/",
     },
     {
       id: 6,
       icon: "/acurate logo.webp",
-      title: "Accurate",
+      title: "ACCURATE",
       sub: "Accounting Software",
       link: "https://account.accurate.id/",
     },
@@ -57,12 +57,12 @@ const AppCollection = () => {
       id: 5,
       icon: "/dsm-logo.png",
       title: "DSM",
-      sub: "DiskStation Manager",
+      sub: "Disk Station Manager",
       link: "https://quickconnect.to/",
     },
   ];
   return (
-    <div className=" gap-[70px] flex flex-wrap lg:justify-start justify-center  items-center">
+    <div className=" gap-[70px] flex flex-wrap justify-center  items-center">
       {main_data.map((i) => {
         return (
           <div className="w-[200px] gap-[8px] flex flex-col" key={i.id}>
