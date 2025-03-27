@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Apps = () => {
   return (
-    <div className=" gap-[70px] flex flex-wrap justify-center  items-center">
+    <div className=" gap-[70px] flex flex-wrap justify-center lg:justify-start  items-center">
       {main_data.map((i) => {
         return (
           <div className="w-[200px] gap-[8px] flex flex-col" key={i.id}>

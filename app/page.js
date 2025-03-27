@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         <Title />
       </div>
-      <div className=" gap-[87px] pl-[80px] pr-[80px] pt-[40px] pb-[120px]  min-h-[700px]  flex justify-center">
+      <div className=" gap-[87px] pl-[80px] pr-[80px] pt-[40px] pb-[120px]  min-h-[700px]  flex justify-center ">
         <Apps />
       </div>
     </div>
