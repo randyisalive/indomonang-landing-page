@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 const Title = () => {
@@ -6,13 +7,31 @@ const Title = () => {
       <div className=" relative justify-center flex  gap-[50px]">
         <div className=" lg:flex hidden gap-4 relative w-[100px]">
           <div className=" absolute left-0 top-0 -rotate-[24deg]">
-            <img src="/documentation-icon.png" alt="" width={35} height={40} />
+            <img
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110"
+              src="/documentation-icon.png"
+              alt=""
+              width={35}
+              height={40}
+            />
           </div>
           <div className=" absolute bottom-0 right-1/3 rotate-[12deg]">
-            <img src="/bulding-icon.png" alt="" width={35} height={40} />
+            <img
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110"
+              src="/bulding-icon.png"
+              alt=""
+              width={35}
+              height={40}
+            />
           </div>
           <div className=" absolute right-0 -rotate-[5deg]">
-            <img src="/agenda-icon.png" alt="" width={35} height={40} />
+            <img
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110"
+              src="/agenda-icon.png"
+              alt=""
+              width={35}
+              height={40}
+            />
           </div>
         </div>
         <div className="flex flex-col gap-[8px] justify-center">
@@ -25,13 +44,31 @@ const Title = () => {
         </div>
         <div className=" lg:flex hidden gap-4 relative w-[100px]">
           <div className=" absolute left-0 rotate-[5deg]">
-            <img src="/hris-icon.png" alt="" width={35} height={40} />
+            <img
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110"
+              src="/hris-icon.png"
+              alt=""
+              width={35}
+              height={40}
+            />
           </div>
           <div className=" absolute right-1/3 bottom-0 -rotate-[12deg]">
-            <img src="/crm-icon.png" alt="" width={35} height={35} />
+            <img
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110"
+              src="/crm-icon.png"
+              alt=""
+              width={35}
+              height={35}
+            />
           </div>
           <div className=" absolute right-0 rotate-[24deg]">
-            <img src="/jadicrm-icon.png" alt="" width={35} height={35} />
+            <img
+              className=" transition ease-in-out hover:-translate-y-1 hover:scale-110"
+              src="/jadicrm-icon.png"
+              alt=""
+              width={35}
+              height={35}
+            />
           </div>
         </div>
       </div>

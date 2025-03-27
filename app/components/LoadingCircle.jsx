@@ -6,7 +6,7 @@ const LoadingCircle = ({ width = 100 }) => {
       <circle
         fill="#BAE6FD"
         stroke="#BAE6FD"
-        stroke-width="2"
+        strokeWidth="2"
         r="15"
         cx="40"
         cy="65"
@@ -24,7 +24,7 @@ const LoadingCircle = ({ width = 100 }) => {
       <circle
         fill="#BAE6FD"
         stroke="#BAE6FD"
-        stroke-width="2"
+        strokeWidth="2"
         r="15"
         cx="100"
         cy="65"
@@ -42,7 +42,7 @@ const LoadingCircle = ({ width = 100 }) => {
       <circle
         fill="#BAE6FD"
         stroke="#BAE6FD"
-        stroke-width="2"
+        strokeWidth="2"
         r="15"
         cx="160"
         cy="65"

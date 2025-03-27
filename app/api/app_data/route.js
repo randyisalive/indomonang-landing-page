@@ -1,4 +1,4 @@
-// app/api/hello/route.js
+// app/api/app_data/route.js
 export async function GET(request) {
   const api = process.env.BASE_URL;
   const API_JSON = {
@@ -31,10 +31,17 @@ export async function GET(request) {
       attachmentResponse.map((res) => res.json())
     );
     // Combine data with attachments
-    const combinedData = data.data.map((item, index) => ({
-      ...item,
-      attachment: attachments[index].data || attachments[index],
-    }));
+    const combinedData = data.data.map((item, index) => {
+      const attachment = attachments[index]?.data || attachments[index] || null;
+
+      return {
+        id: item.id,
+        title: item[2762],
+        sub: item[2763],
+        link: item[2761],
+        attachment,
+      };
+    });
     return Response.json(combinedData);
   }
   return Response.json(data.data);

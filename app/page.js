@@ -1,4 +1,5 @@
 import Apps from "./components/Apps";
+import Footer from "./components/Footer";
 import Title from "./components/Title";
 import {
   square_data_1,
@@ -56,6 +57,7 @@ export default function Home() {
       <div className=" gap-[87px] pl-[80px] pr-[80px] pt-[40px] pb-[120px]  min-h-[700px]  flex justify-center ">
         <Apps />
       </div>
+      <Footer />
     </div>
   );
 }

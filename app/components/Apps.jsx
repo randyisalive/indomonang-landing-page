@@ -11,7 +11,6 @@ const Apps = () => {
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/app_data`);
       const data = await res.json();
-      console.log(data);
       setMainData(data);
       setIsLoading(false);
     } catch (e) {
@@ -23,7 +22,10 @@ const Apps = () => {
     getData();
   }, []);
   return (
-    <div className=" gap-[70px] flex flex-wrap justify-center lg:justify-start  items-center">
+    <div
+      onContextMenu={(e) => e.preventDefault()}
+      className=" gap-[70px] flex flex-wrap justify-center lg:justify-start  items-center"
+    >
       {isLoading && <LoadingCircle width={150} />}
 
       {mainData.map((i) => {
@@ -36,7 +38,7 @@ const Apps = () => {
             key={i.id}
           >
             <div className=" text-center flex justify-center items-center">
-              <Link href={i[2761]} target="_blank">
+              <Link href={i.link} target="_blank">
                 <motion.div
                   whileHover={{ borderColor: "#7DD3FC", boxShadow: "#0369A1" }}
                   className="border  shadow rounded-[8px]"
@@ -52,12 +54,12 @@ const Apps = () => {
               </Link>
             </div>
             <div className="w-[200px] flex flex-col justify-center items-center">
-              <span className="font-semibold">{i[2762]}</span>
+              <span className="font-semibold">{i.title}</span>
               <span
                 className=" text-sm font-normal text-center w-[300px]  h-[50px]"
                 style={{ color: "#64748B" }}
               >
-                {i[2763]}
+                {i.sub}
               </span>
             </div>
           </motion.div>
