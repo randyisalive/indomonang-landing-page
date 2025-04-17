@@ -24,7 +24,7 @@ const Apps = () => {
   return (
     <div
       onContextMenu={(e) => e.preventDefault()}
-      className=" gap-[70px] flex flex-wrap justify-center lg:justify-start  items-center"
+      className=" gap-[70px] flex flex-wrap justify-center  items-center"
     >
       {isLoading && <LoadingCircle width={150} />}
 
