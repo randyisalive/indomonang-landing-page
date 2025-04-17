@@ -2,13 +2,7 @@ import React from "react";
 import Apps from "./components/Apps";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
-import {
-  square_data_1,
-  square_data_2,
-  square_data_3,
-  square_data_4,
-  square_datas,
-} from "./data/statis_data";
+import { square_datas } from "./data/statis_data";
 
 export default function Home() {
   return (
@@ -31,9 +25,6 @@ export default function Home() {
             </React.Fragment>
           );
         })}
-        <div className="flex   h-[100px] justify-between"></div>
-        <div className="flex  h-[100px] justify-between"></div>
-        <div className="flex   h-[100px] justify-between"></div>
         <Title />
       </div>
       <div className=" gap-[87px] pl-[80px] pr-[80px] pt-[40px] pb-[120px]  min-h-[700px]  flex justify-center ">
