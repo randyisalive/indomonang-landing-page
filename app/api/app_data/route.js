@@ -2,6 +2,9 @@
 export async function GET(request) {
   const api = process.env.BASE_URL;
   const API_JSON = {
+    key: process.env.API_KEY,
+    username: process.env.API_USERNAME,
+    password: process.env.API_PASSWORD,
     action: "select",
     entity_id: 168,
   };
@@ -15,6 +18,9 @@ export async function GET(request) {
   if (Array.isArray(data.data)) {
     const attachmentRequest = data.data.map((i) => {
       const ATTACHMENT_JSON = {
+        key: process.env.API_KEY,
+        username: process.env.API_USERNAME,
+        password: process.env.API_PASSWORD,
         action: "download_attachment",
         entity_id: 168,
         item_id: i.id,

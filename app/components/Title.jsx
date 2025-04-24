@@ -36,7 +36,7 @@ const Title = () => {
           <div className=" absolute bottom-0 right-1/3 rotate-[12deg]">
             <Image
               className={
-                password.includes("d")
+                password.includes("b")
                   ? `cursor-pointer transition ease-in-out hover:-translate-y-1 scale-130`
                   : `cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110`
               }
