@@ -8,7 +8,6 @@ const Title = () => {
   useEffect(() => {}, [password]);
   return (
     <div className=" absolute  lg:w-[967px] sm:w-full  top-1/2 left-1/2 -translate-x-1/2 flex flex-col gap-[12px] -translate-y-1/2">
-      {JSON.stringify(password)}
       <div className=" relative justify-center flex  gap-[50px]">
         <div className=" lg:flex hidden gap-4 relative w-[100px]">
           <div className=" absolute left-0 top-0 -rotate-[24deg]">
