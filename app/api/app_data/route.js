@@ -50,7 +50,7 @@ export async function GET(request) {
         attachment,
       };
     });
-    return NextResponse.json({ data: combinedData });
+    return NextResponse.json(combinedData);
   }
-  return NextResponse.json({ data: data.data });
+  return NextResponse.json(data.data);
 }
