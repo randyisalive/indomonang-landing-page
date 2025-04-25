@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 // app/api/app_data/route.js
 export async function GET(request) {
   const api = process.env.BASE_URL;
@@ -48,7 +50,7 @@ export async function GET(request) {
         attachment,
       };
     });
-    return Response.json(combinedData);
+    return NextResponse.json(combinedData);
   }
-  return Response.json(data.data);
+  return NextResponse.json(data.data);
 }
