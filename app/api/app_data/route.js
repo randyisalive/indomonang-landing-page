@@ -16,6 +16,7 @@ export async function GET(request) {
     body: JSON.stringify(API_JSON),
   });
   const data = await res.json();
+  console.log(data);
 
   if (Array.isArray(data.data)) {
     const attachmentRequest = data.data.map((i) => {
@@ -52,5 +53,8 @@ export async function GET(request) {
     });
     return NextResponse.json(combinedData);
   }
-  return NextResponse.json(data.data);
+  return NextResponse.json(
+    { message: "error, connection timeout" },
+    { status: 200 }
+  );
 }
