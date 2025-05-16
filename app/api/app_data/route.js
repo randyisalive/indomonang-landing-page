@@ -16,7 +16,6 @@ export async function GET(request) {
     body: JSON.stringify(API_JSON),
   });
   const data = await res.json();
-  console.log(data);
 
   if (Array.isArray(data.data)) {
     const attachmentRequest = data.data.map((i) => {

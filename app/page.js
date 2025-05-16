@@ -3,10 +3,15 @@ import Apps from "./components/Apps";
 import Footer from "./components/Footer";
 import Title from "./components/Title";
 import { square_datas } from "./data/statis_data";
+import { revalidatePath } from "next/cache";
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch("http://localhost:3001/api/app_data", {
+    next: { revalidate: 60 },
+  });
+  const data = await res.json();
   return (
-    <div>
+    <React.Fragment>
       <div className=" font-display text-power h-[500px] flex flex-col  gap-[20px]  w-full relative align-top text-center">
         {square_datas.map((x) => {
           return (
@@ -28,9 +33,9 @@ export default function Home() {
         <Title />
       </div>
       <div className=" gap-[87px] pl-[80px] pr-[80px] pt-[40px] pb-[120px]  min-h-[700px]  flex justify-center ">
-        <Apps />
+        <Apps data={data} />
       </div>
       <Footer />
-    </div>
+    </React.Fragment>
   );
 }

@@ -2,32 +2,15 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import LoadingCircle from "./LoadingCircle";
 
-const Apps = () => {
-  const [mainData, setMainData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const getData = async () => {
-    try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/app_data`);
-      const data = await res.json();
-      setMainData(data);
-      setIsLoading(false);
-    } catch (e) {
-      console.error(e);
-    }
-  };
+const Apps = ({ data = [] }) => {
+  const [mainData, setMainData] = useState(data);
 
-  useEffect(() => {
-    getData();
-  }, []);
   return (
     <div
       onContextMenu={(e) => e.preventDefault()}
       className=" gap-[70px] flex flex-wrap justify-center  items-center"
     >
-      {isLoading && <LoadingCircle width={150} />}
-
       {mainData.map((i) => {
         return (
           <motion.div
