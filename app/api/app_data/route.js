@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 // app/api/app_data/route.js
-export async function GET(request) {
+export async function GET(params) {
   const api = process.env.BASE_URL;
   const API_JSON = {
     key: process.env.API_KEY,

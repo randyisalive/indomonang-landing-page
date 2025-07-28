@@ -5,6 +5,9 @@ import Link from "next/link";
 
 const Apps = ({ data = [] }) => {
   const [mainData, setMainData] = useState(data);
+  const [devData, setDevData] = useState([]);
+
+  useEffect(() => {}, []);
 
   return (
     <div
