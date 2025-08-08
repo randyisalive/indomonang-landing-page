@@ -2,12 +2,10 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import AppFolder from "./AppFolder";
 
 const Apps = ({ data = [] }) => {
   const [mainData, setMainData] = useState(data);
-  const [devData, setDevData] = useState([]);
-
-  useEffect(() => {}, []);
 
   return (
     <div
@@ -15,12 +13,15 @@ const Apps = ({ data = [] }) => {
       className=" gap-[70px] flex flex-wrap justify-center  items-center"
     >
       {mainData.map((i) => {
+        if (i.childs.length > 0) {
+          return <AppFolder />;
+        }
         return (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-[200px] gap-[8px] flex flex-col"
+            className="w-[200px] gap-[8px] flex flex-col "
             key={i.id}
           >
             <div className=" text-center flex justify-center items-center">

@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Title from "./components/Title";
 import { square_datas } from "./data/statis_data";
 import LoadingCircle from "./components/LoadingCircle";
+import AppFolder from "./components/AppFolder";
 
 export default async function Home() {
   try {
@@ -11,11 +12,16 @@ export default async function Home() {
       next: { revalidate: 60 },
     });
     const data = await res.json();
+    console.log(data);
 
     return (
       <React.Fragment>
         <div className=" font-display text-power h-[500px] flex flex-col  gap-[20px]  w-full relative align-top text-center">
           {square_datas.map((x) => {
+            const childs = x.childs?.map((i) => {
+              return i;
+            });
+            console.log(childs);
             return (
               <React.Fragment key={x.key}>
                 <div className="flex   h-[100px] justify-between">
