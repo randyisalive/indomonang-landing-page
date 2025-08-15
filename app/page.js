@@ -7,8 +7,8 @@ import LoadingCircle from "./components/LoadingCircle";
 
 export default async function Home() {
   try {
-    const res = await fetch("http://localhost:3001/api/app_data", {
-      next: { revalidate: 60 },
+    const res = await fetch("http://localhost:4003/api/app_data", {
+      next: { revalidate: 10 },
     });
     const data = await res.json();
 

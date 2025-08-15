@@ -17,8 +17,10 @@ export async function GET(request) {
   });
   const data = await res.json();
 
-  if (Array.isArray(data.data)) {
-    const attachmentRequest = data.data.map((i) => {
+  const sorted_data = data.data.sort((a, b) => a[4063] - b[4063]);
+
+  if (Array.isArray(sorted_data)) {
+    const attachmentRequest = sorted_data.map((i) => {
       const ATTACHMENT_JSON = {
         key: process.env.API_KEY,
         username: process.env.API_USERNAME,
